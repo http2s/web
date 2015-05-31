@@ -5,7 +5,7 @@ all:
 	@echo
 	pwd
 	@echo
-	git add .
+	git add -A .
 	@echo
 	git commit -a -m "www.http2s.com"
 	@echo	
