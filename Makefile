@@ -1,6 +1,6 @@
 .PHONY: all
 all:
-	@clear
+	#@clear
 	ls 
 	@echo
 	pwd
