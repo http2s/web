@@ -13,14 +13,21 @@
 	  var s = document.getElementsByTagName("script")[0]; 
 	  s.parentNode.insertBefore(hm, s);
 	})();
+
+	<script src="//cdn.ckeditor.com/4.5.4/standard/ckeditor.js"></script>
+
 	</script>
 
 
   </head>
   <body>
-        <h1>www.http2s.com</h1>
-        <h1>http2s@163.com</h1>
-        <h1>微信订阅号: http2s</h1>
+        <h5>www.http2s.com</h5>
+        <h5>http2s@163.com</h5>
+        <h5>微信订阅号: http2s</h5>
 	<hr>
+        <textarea name="editor1"></textarea>
+        <script>
+            CKEDITOR.replace( 'editor1' );
+        </script>
   </body>
 </html>
