@@ -27,21 +27,25 @@
 			CKEDITOR.replace( 'editor1' );
 		</script>
 
-		<!-- MAX -->
+		<!-- MAX AND FOCUS -->
 		<script type="text/javascript">
 			CKEDITOR.on('instanceReady', function (event) {
 				var editor = event.editor;
 				setTimeout(function () {
 
-					// Delay bit more if editor is still not ready.
-					if (!editor.element) {
-						setTimeout(arguments.callee, 10);
-						return;
-					}
+				// Delay bit more if editor is still not ready.
+				if (!editor.element) {
+					setTimeout(arguments.callee, 10);
+					return;
+				}
 
-					event.removeListener('instanceReady', this.callee);
-					var command = editor.getCommand('maximize');
-					command.exec();
+				// SET FOCUS WHEN STARTUP
+				editor.focus();
+
+				event.removeListener('instanceReady', this.callee);
+				var command = editor.getCommand('maximize');	// SET MAXIMUM WHEN STARTUP
+				command.exec();
+
 				}, 0);
 			}, null, null, 9999);
 		</script>
