@@ -49,5 +49,19 @@
 				}, 0);
 			}, null, null, 9999);
 		</script>
+
+		<script>
+function beforeUnload( e )
+{
+    if ( CKEDITOR.instances.editor1.checkDirty() )
+	        return e.returnValue = "You will lose the changes made in the editor.";
+}
+
+if ( window.addEventListener )
+    window.addEventListener( 'beforeunload', beforeUnload, false );
+else
+    window.attachEvent( 'onbeforeunload', beforeUnload );
+		</script>
+
   </body>
 </html>
